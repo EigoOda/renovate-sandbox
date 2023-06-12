@@ -1,0 +1,14 @@
+name: main pipeline
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  check-functions:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Prepare
+        run: echo "hello"
